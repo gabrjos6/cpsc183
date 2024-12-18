@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Elo Rankings</title>
+</head>
+<body>
+    <h1>Subreddit Elo Rankings</h1>
+    <table>
+        <thead>
+            <tr>
+                <th>Name</th>
+                <th>Elo</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for subreddit in rankings %}
+                <tr>
+                    <td>{{ subreddit[0] }}</td>  <!-- Subreddit Name -->
+                    <td>{{ subreddit[1] }}</td>  <!-- Elo Score -->
+                </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+</body>
+</html>
+
